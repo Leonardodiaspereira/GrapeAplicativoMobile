@@ -1,0 +1,19 @@
+<resources>
+    <!-- Tema personalizado para o aplicativo -->
+    <style name="Theme.GrapeApp" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Personalize as cores primárias e de destaque -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryDark">@color/purple_700</item>
+        <item name="colorSecondary">@color/teal_200</item> <!-- Usando colorSecondary para destaque -->
+
+        <!-- Cores de texto principais e secundárias -->
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/darker_gray</item>
+
+        <!-- Fundo preto para o app -->
+        <item name="android:windowBackground">@android:color/black</item>
+
+        <!-- Cor do texto -->
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+</resources>

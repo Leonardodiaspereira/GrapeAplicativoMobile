@@ -1,0 +1,36 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <!-- TextView para exibir o resumo completo de todos os pedidos -->
+        <TextView
+            android:id="@+id/tvResumoPedidos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:paddingBottom="16dp"
+            android:gravity="center" />
+
+        <!-- Botão para atualizar a lista de pedidos -->
+        <Button
+            android:id="@+id/btnAtualizarPedidos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Atualizar Pedidos"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/green"
+            android:padding="12dp"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>

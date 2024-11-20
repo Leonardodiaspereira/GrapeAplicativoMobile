@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/black"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tvMensagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Obrigado por seu pedido!"
+        android:textColor="@color/green"
+        android:textSize="24sp"
+        android:paddingBottom="16dp" />
+
+    <TextView
+        android:id="@+id/tvEstimativaEntrega"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Entrega em até 24 horas."
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:paddingBottom="16dp" />
+
+    <TextView
+        android:id="@+id/tvContatoSuporte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contato para suporte: (11) 3333-1552"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:paddingBottom="32dp" />
+
+    <Button
+        android:id="@+id/btnMeusPedidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Acompanhe o Pedido"
+        android:backgroundTint="@color/green"
+        android:textColor="@color/white"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnVoltarInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continuar Comprando"
+        android:backgroundTint="@color/green"
+        android:textColor="@color/white" />
+</LinearLayout>

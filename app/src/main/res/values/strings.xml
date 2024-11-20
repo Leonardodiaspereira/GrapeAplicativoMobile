@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Grape App</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="email">E-mail</string>
+    <string name="senha">Senha</string>
+    <string name="nome">Nome</string>
+    <string name="telefone">Telefone</string>
+    <string name="cpf">CPF</string>
+    <string name="confirmar_senha">Confirmar Senha</string>
+    <string name="cadastro_label">Cadastro</string>
+    <string name="cadastrado_sucesso">Cadastrado com sucesso!</string>
+    <string name="pedidos">Pedidos</string>
+    <string name="valor_total">Valor Total: R$%1$s</string>
+    <string name="imagem_produto">Imagem do Produto</string>
+    <string name="nome_produto">Nome do Produto</string>
+    <string name="descricao_produto">Descrição do Produto</string>
+    <string name="preco_por_kg">R$ %1$s/kg</string>
+    <string name="quantidade_kg">Quantidade (Kg)</string>
+    <string name="btn_proximo">Próximo</string>
+
+    <!-- Novas Strings para a Tela de Checkout -->
+    <string name="resumo_pedido">Resumo do Pedido</string>
+    <string name="produtos_comprados">Produtos: %1$sx %2$s - R$%3$s</string>
+    <string name="total_compra">Valor Total: R$%1$s</string>
+    <string name="endereco_entrega">Endereço de Entrega</string>
+    <string name="endereco_exemplo">Rua Exemplo, 123, Cidade, Estado</string>
+    <string name="editar_endereco">Editar Endereço</string>
+    <string name="metodo_pagamento">Método de Pagamento</string>
+    <string name="cartao_credito">Cartão de Crédito</string>
+    <string name="cartao_debito">Cartão de Débito</string>
+    <string name="pix">PIX</string>
+    <string name="confirmar_compra">Confirmar Compra</string>
+    <string name="chave_pix_copiada">Chave PIX copiada com sucesso!</string>
+    <string name="chave_pix">Chave PIX: grapefazendaurbana@gmail.com</string>
+    <string name="copiar_chave_pix">Copiar Chave PIX</string>
+    <string name="aguardando_pagamento">Aguardando confirmação de pagamento via PIX</string>
+    <string name="escolher_pagamento">Escolha um método de pagamento</string>
+    <string name="app_logo_description">Logotipo do Aplicativo</string>
+
+</resources>

@@ -1,0 +1,283 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ScrollView com os campos de entrada -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Resumo do pedido -->
+            <TextView
+                android:id="@+id/tvResumoPedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resumo do Pedido"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:padding="16dp" />
+
+            <!-- Produtos comprados -->
+            <TextView
+                android:id="@+id/tvProdutos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvResumoPedido"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="16dp"
+                android:textColor="@color/white"
+                android:text="Produtos Comprados" />
+
+            <!-- Valor total da compra -->
+            <TextView
+                android:id="@+id/tvTotalCompra"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Valor Total: R$0,00"
+                app:layout_constraintTop_toBottomOf="@id/tvProdutos"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="16dp"
+                android:textColor="@color/white" />
+
+            <!-- Informações de endereço -->
+            <TextView
+                android:id="@+id/tvEnderecoEntrega"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Endereço de Entrega"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/tvTotalCompra"
+                app:layout_constraintStart_toStartOf="parent"
+                android:padding="16dp" />
+
+            <!-- Campos de endereço -->
+            <EditText
+                android:id="@+id/edtNome"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Nome Completo"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:backgroundTint="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/tvEnderecoEntrega"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="16dp" />
+
+            <EditText
+                android:id="@+id/edtRua"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Rua"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:backgroundTint="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/edtNome"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="16dp" />
+
+            <EditText
+                android:id="@+id/edtNumero"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Número"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:backgroundTint="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/edtRua"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="16dp" />
+
+            <EditText
+                android:id="@+id/edtCidade"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Cidade"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:backgroundTint="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/edtNumero"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="16dp" />
+
+            <EditText
+                android:id="@+id/edtEstado"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Estado"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:backgroundTint="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/edtCidade"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="16dp" />
+
+            <EditText
+                android:id="@+id/edtCep"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="CEP"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:backgroundTint="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/edtEstado"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="16dp" />
+
+            <!-- Método de Pagamento -->
+            <TextView
+                android:id="@+id/tvMetodoPagamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selecione o Método de Pagamento"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/edtCep"
+                app:layout_constraintStart_toStartOf="parent"
+                android:padding="16dp" />
+
+            <!-- RadioGroup com opções de pagamento -->
+            <RadioGroup
+                android:id="@+id/radioGroupPagamento"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvMetodoPagamento"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="16dp">
+
+                <RadioButton
+                    android:id="@+id/radioCartaoCredito"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:padding="16dp"
+                    android:text="Cartão de Crédito"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/radioCartaoDebito"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:padding="16dp"
+                    android:text="Cartão de Débito"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/radioPIX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:padding="16dp"
+                    android:text="PIX"
+                    android:textColor="@color/white" />
+            </RadioGroup>
+
+            <!-- Observação para PIX, inicialmente oculta -->
+            <TextView
+                android:id="@+id/tvPixObservacao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ao selecionar PIX, clique em 'Confirmar Pedido' para gerar a chave PIX e realizar o pagamento."
+                android:textColor="@color/white"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/radioGroupPagamento"
+                app:layout_constraintStart_toStartOf="parent"
+                android:padding="8dp" />
+
+            <!-- Campo para número do cartão -->
+            <EditText
+                android:id="@+id/edtNumeroCartao"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Número do Cartão"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:inputType="number"
+                android:maxLength="16"
+                android:padding="12dp"
+                app:layout_constraintTop_toBottomOf="@id/tvPixObservacao"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:visibility="gone" />
+
+            <!-- Outras informações do cartão -->
+            <EditText
+                android:id="@+id/edtNomeCartao"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Nome no Cartão"
+                android:inputType="textPersonName"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:padding="12dp"
+                app:layout_constraintTop_toBottomOf="@id/edtNumeroCartao"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/edtValidadeCartao"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Validade (MM/AA)"
+                android:inputType="datetime"
+                android:maxLength="5"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:padding="12dp"
+                app:layout_constraintTop_toBottomOf="@id/edtNomeCartao"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/edtCvvCartao"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="CVV"
+                android:inputType="numberPassword"
+                android:maxLength="3"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:padding="12dp"
+                app:layout_constraintTop_toBottomOf="@id/edtValidadeCartao"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:visibility="gone" />
+
+            <!-- Botão para confirmar a compra -->
+            <Button
+                android:id="@+id/btnConfirmarCompra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Confirmar Compra"
+                android:backgroundTint="@color/green"
+                android:textColor="@color/white"
+                android:padding="16dp"
+                app:layout_constraintTop_toBottomOf="@id/edtCvvCartao"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</RelativeLayout>

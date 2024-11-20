@@ -1,0 +1,10 @@
+<resources>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="black">#000000</color> <!-- Fundo preto -->
+    <color name="white">#FFFFFF</color> <!-- Texto branco -->
+    <color name="green">#4CAF50</color> <!-- Verde para botões e texto -->
+    <color name="purple">#800080</color> <!-- Exemplo de roxo -->
+    <color name="green1">#66FF00</color> <!-- Verde para a frase de destaque da tela de produtos -->
+</resources>

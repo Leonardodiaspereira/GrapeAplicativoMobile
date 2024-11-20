@@ -1,0 +1,75 @@
+Segue abaixo os comandos SQL que foram utilizados para criar o banco de dados que é utilizado pelas três aplicações (Web, Desktop e Mobile). Este banco centraliza os dados, garantindo a integração entre as plataformas e facilitando a gestão do sistema.
+
+-- Criar banco de dados
+CREATE DATABASE grape_fazenda;
+GO
+
+USE grape_fazenda;
+GO
+
+-- Criar tabela clientes
+CREATE TABLE clientes (
+    id INT PRIMARY KEY IDENTITY,
+    nome NVARCHAR(100) NOT NULL,
+    email NVARCHAR(100) NOT NULL,
+    telefone VARCHAR(15) NOT NULL,
+    senha NVARCHAR(100) NOT NULL,
+    cpf VARCHAR(14) NOT NULL
+);
+GO
+
+-- Criar tabela funcionarios
+CREATE TABLE funcionarios (
+    id INT PRIMARY KEY IDENTITY,
+    nome NVARCHAR(100) NOT NULL,
+    cpf VARCHAR(14) NOT NULL,
+    email_corporativo NVARCHAR(100) NOT NULL,
+    senha NVARCHAR(100) NOT NULL
+);
+GO
+
+-- Criar tabela produtos
+CREATE TABLE produtos (
+    id INT PRIMARY KEY IDENTITY,
+    nome NVARCHAR(100) NOT NULL,
+    valor_por_kg DECIMAL(10, 2) NOT NULL,
+    quantidade_em_estoque INT NOT NULL
+);
+GO
+
+-- Criar tabela pedidos
+CREATE TABLE pedidos (
+    id INT PRIMARY KEY IDENTITY,
+    cliente_id INT NOT NULL,
+    valor_total DECIMAL(10, 2) NOT NULL,
+    forma_pagamento NVARCHAR(50) NOT NULL,
+    status NVARCHAR(20) NOT NULL,
+    data_pedido DATE NOT NULL,
+    nome_completo NVARCHAR(100) NOT NULL,
+    rua NVARCHAR(100) NOT NULL,
+    numero NVARCHAR(11) NOT NULL,
+    cidade NVARCHAR(50) NOT NULL,
+    estado NVARCHAR(2) NOT NULL,
+    cep NVARCHAR(9) NOT NULL,
+    FOREIGN KEY (cliente_id) REFERENCES clientes(id)
+);
+GO
+
+-- Criar tabela itens_pedido
+CREATE TABLE itens_pedido (
+    id INT PRIMARY KEY IDENTITY,
+    pedido_id INT NOT NULL,
+    produto_id INT NOT NULL,
+    quantidade INT NOT NULL,
+    FOREIGN KEY (pedido_id) REFERENCES pedidos(id),
+    FOREIGN KEY (produto_id) REFERENCES produtos(id)
+);
+GO
+
+-- Criar tabela promocoes
+CREATE TABLE promocoes (
+    id INT PRIMARY KEY IDENTITY,
+    email NVARCHAR(100) NOT NULL,
+    data_inscricao DATETIME NOT NULL
+);
+GO

@@ -14,7 +14,7 @@ CREATE TABLE clientes (
     email NVARCHAR(100) NOT NULL,
     telefone VARCHAR(15) NOT NULL,
     senha NVARCHAR(100) NOT NULL,
-    cpf VARCHAR(14) NOT NULL
+    cpf VARCHAR(14) NOT NULL PRIMARY KEY
 );
 GO
 
@@ -22,7 +22,7 @@ GO
 CREATE TABLE funcionarios (
     id INT PRIMARY KEY IDENTITY,
     nome NVARCHAR(100) NOT NULL,
-    cpf VARCHAR(14) NOT NULL,
+    cpf VARCHAR(14) NOT NULL PRIMARY KEY
     email_corporativo NVARCHAR(100) NOT NULL,
     senha NVARCHAR(100) NOT NULL
 );
@@ -69,7 +69,7 @@ GO
 -- Criar tabela promocoes
 CREATE TABLE promocoes (
     id INT PRIMARY KEY IDENTITY,
-    email NVARCHAR(100) NOT NULL,
+    email NVARCHAR(100) NOT NULL PRIMARY KEY,
     data_inscricao DATETIME NOT NULL
 );
 GO
